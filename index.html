@@ -635,7 +635,7 @@ span.match-date.soon {
     position: relative;
 }
 .match-timing .live:before {
- content: "جارية الآن";
+ content: "Live Now";
  position: absolute;
  animation: blinker 500ms ease-in-out infinite;
  margin: 0;
@@ -977,7 +977,7 @@ a:hover {
 }
 
 .match-timing .live:before {
- content: "جارية الآن";
+ content: "Live Now";
 
  position: absolute;
  animation: blinker 500ms ease-in-out infinite;
@@ -1530,7 +1530,7 @@ function closeNav() {
 <script src='https://cdn.statically.io/gh/yallashoot808/yalla-shoot-new/25ff629f/mmt.js'></script>
 <script src='https://cdn.statically.io/gh/yallashoot808/yalla-shoot-new/96be9fd3/timer.js'></script>
 <script>//<![CDATA[
-$(document).ready(function(){$(".match-event .match-date").each(function(){var t=$(this),a=t.data("start"),e=t.data("gameends"),m=moment(a,"YYYY-MM-DD HH:mm:ssZ"),n=moment(e,"YYYY-MM-DD HH:mm:ssZ"),e=moment.utc().format("YYYY-MM-DD HH:mm:ssZ"),m=m.diff(e,"minutes"),e=n.diff(e,"minutes");switch(!0){case 30<m:var d=moment.utc(a).toDate();t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html("لم تبدا بعد").addClass("not-start"),t.parents(".match-event").addClass("notstart");break;case 0<m:d=moment.utc(a).toDate(),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html(" تبدا قريبا").addClass("soon"),t.parents(".match-event").addClass("ch-soon");break;case 0<e:d=moment.utc(a).toDate(),t.parent().find(".match-date").html("جارية الآن").addClass("live"),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parents(".match-event").addClass("ch-live");break;default:d=moment.utc(a).toDate(),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html("إنتهت المباراة").addClass("end"),t.parents(".match-event").addClass("ch-end")}})});
+$(document).ready(function(){$(".match-event .match-date").each(function(){var t=$(this),a=t.data("start"),e=t.data("gameends"),m=moment(a,"YYYY-MM-DD HH:mm:ssZ"),n=moment(e,"YYYY-MM-DD HH:mm:ssZ"),e=moment.utc().format("YYYY-MM-DD HH:mm:ssZ"),m=m.diff(e,"minutes"),e=n.diff(e,"minutes");switch(!0){case 30<m:var d=moment.utc(a).toDate();t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html("Not Started").addClass("not-start"),t.parents(".match-event").addClass("notstart");break;case 0<m:d=moment.utc(a).toDate(),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html(" Starting soon").addClass("soon"),t.parents(".match-event").addClass("ch-soon");break;case 0<e:d=moment.utc(a).toDate(),t.parent().find(".match-date").html("Live Now").addClass("live"),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parents(".match-event").addClass("ch-live");break;default:d=moment.utc(a).toDate(),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html("Match End").addClass("end"),t.parents(".match-event").addClass("ch-end")}})});
 //]]></script>
 
 
